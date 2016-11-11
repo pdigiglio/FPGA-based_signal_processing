@@ -10,7 +10,7 @@ entity traffic_light_tb is
 end traffic_light_tb;
 
 architecture Behavioral of traffic_light_tb is
---	component traffic_light is 
+--  component traffic_light is 
 --        Port (reset_i      : in  std_logic;
 --              clk_i        : in  std_logic;
 --              led_green_o  : out std_logic;

@@ -14,19 +14,19 @@ end traffic_light;
 
 architecture Behavioral of traffic_light is
     -- Define an enumeration with all the possible states
-	type tl_state is (yellow_state, green_state, red_state);
+    type tl_state is (yellow_state, green_state, red_state);
     -- Initialize the traffic-light state to yellow
-	signal iState : tl_state := yellow_state;
+    signal iState : tl_state := yellow_state;
 
-	-- Define constant times for each state
-	constant green_time  : integer := 100;
-	constant yellow_time : integer := 10;
-	constant red_time    : integer := 200;
+    -- Define constant times for each state
+    constant green_time  : integer := 100;
+    constant yellow_time : integer := 10;
+    constant red_time    : integer := 200;
 begin
 
-	process(clock_i)
+    process(clock_i)
         variable iCount : integer := 0;
-	begin
+    begin
         -- Magic happens on the rising edge of the clock
         if rising_edge(clock_i) then
             -- Synchronous reset (it's triggered by the clock)
